@@ -1,16 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Post from './Post.js';
 
-const PostList = (props) => {
+const PostList = ({ posts }) => {
     return (
         <div>
-            PostList
-            {/* {posts && posts.map(post => (
-                <div>
-                    <h2>{post.Name}</h2>
-                    <h3>{post.Post}</h3>
-                </div>
-            ))} */}
-            {console.log(props)}
+            {posts && posts.map(post => <Post key={post._id} post={post} />)}
         </div>
     )
 }
